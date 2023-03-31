@@ -33,11 +33,13 @@ int main()
 	cout << "OpenCV version: " << getOpenCVversion() << endl;
 
 	//Create a blank image
-	int rows = 100;
-	int cols = 100;
+	int rows = 500;
+	int cols = 500;
 		
-	Mat img = Mat::zeros(rows, cols, CV_8UC3);	//CV_8UC3 = 8-bit unsigned integer matrix/image with 3 channels.
-	drawCircle(img, Point(50, 50), 20, Scalar(0, 255, 128), -100);
+	Mat img = Mat::zeros(rows, cols, CV_8UC3);	//CV_8UC3 = 8-bit unsigned integer matrix/image with 3 channels
+	//Draw Donuts
+	drawCircle(img, Point(100, 100), 50, Scalar(120, 255, 255), 50);
+	drawCircle(img, Point(200, 100), 50, Scalar(120, 0, 255), 50);
 
 	imshow("Image", img);
 	waitKey(0);
